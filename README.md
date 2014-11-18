@@ -7,42 +7,26 @@ Sample Output:
 
 ```
 Fixed Number of Columns: 128
-#####
+##### Running Sum
   Rows      Time   Ratio
-    16    0.0056ms   0.7
-    32    0.0105ms   1.9
-    64    0.0211ms     2
-   128     0.043ms     2
+    16    0.0052ms   0.7
+    32    0.0112ms   2.2
+    64    0.0221ms     2
+   128    0.0446ms     2
 :: The ratio is -> 2
-#####
+##### Array Access
   Rows      Time   Ratio
-    16    0.0102ms     2
-    32    0.0211ms   2.1
-    64    0.0417ms     2
-   128     0.086ms   2.1
-   256     0.189ms   2.2
-   512    0.3535ms   1.9
-  1024     0.725ms   2.1
-  2048    1.0663ms   1.5
-  4096    3.7722ms   3.5
-  8192     8.714ms   2.3
- 16384   13.3172ms   1.5
- 32768   38.6288ms   2.9
- 65536   79.4701ms   2.1
-131072  136.4912ms   1.7
-262144  244.4197ms   1.8
-524288  488.9265ms     2
-1048576 1046.2847ms   2.1
-Stopping the madness before all memory are belong to us.
+    16    0.0112ms   2.2
+    32    0.0201ms   1.8
+    64      0.04ms     2
+   128    0.0804ms     2
 :: The ratio is -> 2
-#####
+##### Brute Force
   Rows      Time   Ratio
-    16    0.8554ms   3.6
-    32    3.2732ms   3.8
-    64   12.8812ms   3.9
-   128   50.9455ms     4
-   256  202.1753ms     4
-:: The ratio is -> 4
+    16    0.8505ms   3.6
+    32    3.3265ms   3.9
+    64    13.004ms   3.9
+:: The ratio is -> 3.9
 #####
 All Done. Hit enter to quit
 ```
