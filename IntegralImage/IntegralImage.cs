@@ -5,7 +5,10 @@ namespace IntegralImage
 {
     public static class IntegralImage
     {
-        public static TimeSpan TimeDoublingRows(int numOfRows, int numColumns, Func<int[][], int[][]> integralImageMethod)
+        private static readonly Random Random = new Random();
+
+        public static TimeSpan TimeDoublingRows(int numOfRows, int numColumns,
+                                                Func<int[][], int[][]> integralImageMethod)
         {
             var imageMap = new int[numOfRows][];
 
@@ -53,7 +56,7 @@ namespace IntegralImage
                 for (int j = 0; j < imageMap[i].Length; j++)
                 {
                     var integralValue = imageMap[i][j];
-                    
+
                     if (i > 0)
                     {
                         integralValue += imageMap[i - 1][j];
@@ -64,7 +67,7 @@ namespace IntegralImage
                     }
                     if (i > 0 && j > 0)
                     {
-                        integralValue -= imageMap[i-1][j - 1];
+                        integralValue -= imageMap[i - 1][j - 1];
                     }
                     integralImage[i][j] = integralValue;
                 }
@@ -100,7 +103,7 @@ namespace IntegralImage
             }
             return sum;
         }
-        
+
         private static int[] CreateRandomRow(int length)
         {
             var row = new int[length];
@@ -110,7 +113,5 @@ namespace IntegralImage
             }
             return row;
         }
-
-        private static readonly Random Random = new Random();
     }
 }
