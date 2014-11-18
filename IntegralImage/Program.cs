@@ -17,13 +17,13 @@ namespace IntegralImage
             //IntegralImage.TimeDoublingRows(initialDimension, numColumns, IntegralImage.GetIntegralImageBruteForce);
 
             Console.WriteLine("Fixed Number of Columns: {0}", numColumns);
-            PrintHeader();
+            PrintHeader("Running Sum");
             DoublingRatio.Run(initialDimension,
                 i => IntegralImage.TimeDoublingRows(i, numColumns, IntegralImage.GetIntegralImageSum));
-            PrintHeader();
+            PrintHeader("Array Access");
             DoublingRatio.Run(initialDimension,
                 i => IntegralImage.TimeDoublingRows(i, numColumns, IntegralImage.GetIntegralImageArrayAccess));
-            PrintHeader();
+            PrintHeader("Brute Force");
             DoublingRatio.Run(initialDimension,
                 i => IntegralImage.TimeDoublingRows(i, numColumns, IntegralImage.GetIntegralImageBruteForce));
             Console.WriteLine(HeaderBreak);
@@ -33,9 +33,9 @@ namespace IntegralImage
             Console.ReadLine();
         }
 
-        private static void PrintHeader()
+        private static void PrintHeader(string sectionName)
         {
-            Console.WriteLine(HeaderBreak);
+            Console.WriteLine(HeaderBreak + " " + sectionName);
             Console.WriteLine("{0,6} {1,9}   {2,5}", "Rows", "Time", "Ratio");
         }
     }
