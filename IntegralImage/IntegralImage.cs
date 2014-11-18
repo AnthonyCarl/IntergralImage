@@ -22,10 +22,9 @@ namespace IntegralImage
 
         public static int[][] GetIntegralImageSum(int[][] imageMap)
         {
-            var dimension = imageMap.GetUpperBound(0) +1;
-            var integralImage = new int[dimension][];
+            var integralImage = new int[imageMap.Length][];
 
-            for (int i = 0; i < dimension; i++)
+            for (int i = 0; i < imageMap.Length; i++)
             {
                 integralImage[i] = new int[imageMap[i].Length];
                 var currentRowSum = 0;
@@ -45,10 +44,9 @@ namespace IntegralImage
 
         public static int[][] GetIntegralImageArrayAccess(int[][] imageMap)
         {
-            var dimension = imageMap.Length;
-            var integralImage = new int[dimension][];
+            var integralImage = new int[imageMap.Length][];
 
-            for (int i = 0; i < dimension; i++)
+            for (int i = 0; i < imageMap.Length; i++)
             {
                 integralImage[i] = new int[imageMap[i].Length];
 
@@ -76,10 +74,9 @@ namespace IntegralImage
 
         public static int[][] GetIntegralImageBruteForce(int[][] imageMap)
         {
-            var dimension = imageMap.Length;
-            var integralImage = new int[dimension][];
+            var integralImage = new int[imageMap.Length][];
 
-            for (int i = 0; i < dimension; i++)
+            for (int i = 0; i < imageMap.Length; i++)
             {
                 integralImage[i] = new int[imageMap[i].Length];
 
