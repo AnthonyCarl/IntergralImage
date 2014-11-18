@@ -20,7 +20,7 @@ namespace IntegralImage
 
                 var currentRatio = Math.Round(currentMs/previousMs, 1);
 
-                Console.WriteLine("{0,6} {1,9}ms {2,5}", currentN, currentMs, currentRatio);
+                Console.WriteLine("{0,8} {1,11}ms {2,5}", currentN, currentMs, currentRatio);
                 previousMs = currentMs;
 
                 if (currentN >= MaxN)

@@ -37,7 +37,7 @@ namespace IntegralImage
                     var integralValue = currentRowSum;
                     if (i > 0)
                     {
-                        integralValue += imageMap[i - 1][j];
+                        integralValue += integralImage[i - 1][j];
                     }
                     integralImage[i][j] = integralValue;
                 }
@@ -59,15 +59,15 @@ namespace IntegralImage
 
                     if (i > 0)
                     {
-                        integralValue += imageMap[i - 1][j];
+                        integralValue += integralImage[i - 1][j];
                     }
                     if (j > 0)
                     {
-                        integralValue += imageMap[i][j - 1];
+                        integralValue += integralImage[i][j - 1];
                     }
                     if (i > 0 && j > 0)
                     {
-                        integralValue -= imageMap[i - 1][j - 1];
+                        integralValue -= integralImage[i - 1][j - 1];
                     }
                     integralImage[i][j] = integralValue;
                 }
